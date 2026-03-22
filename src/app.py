@@ -49,6 +49,12 @@ def root():
 
 @app.get("/activities")
 def get_activities():
+    """
+    Retrieve the list of activities.
+
+    Returns:
+        list: A list of activity objects or dictionaries containing activity information.
+    """
     return activities
 
 
@@ -61,7 +67,10 @@ def signup_for_activity(activity_name: str, email: str):
 
     # Get the specific activity
     activity = activities[activity_name]
-
+     
+     # Validate student is not already signed up
+    
+    
     # Add student
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
