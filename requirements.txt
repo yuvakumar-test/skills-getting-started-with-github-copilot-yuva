@@ -3,4 +3,3 @@ uvicorn
 httpx
 watchfiles
 pytest
-tests
